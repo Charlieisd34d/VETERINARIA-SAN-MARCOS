@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria San Marcos - Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="funciones.js"></script>
+</head>
+<body>
+
+    <!-- Encabezado con navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="square-icon">■</span>
+            <strong>Veterinaria San Marcos</strong>
+        </div>
+        <nav class="nav-links">
+            <a href="pagina-principal.html">Home</a> |
+            <a href="productos.html">Productos</a> |
+            <a href="blogs.html">Blogs</a> |
+            <a href="contacto.html">Contacto</a> |
+            <a href="inicio-sesion.html">Iniciar Sesión</a>
+        </nav>
+        <div class="cart">
+            <a href="carrito.html" style="text-decoration: none; color: inherit;">🛒 Carrito (0)</a>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal de Contacto -->
+    <main class="login-container">
+        
+        <!-- Logo -->
+        <div class="company-logo-placeholder">
+            <div class="x-box"></div>
+        </div>
+
+        <!-- Nombre de la Empresa -->
+        <h1 class="company-title">Veterinaria San Marcos</h1>
+
+        <!-- Tarjeta del Formulario de Contactos -->
+        <div class="login-card">
+            <div class="login-header contact-header">FORMULARIO DE CONTACTOS</div>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="nombre">NOMBRE COMPLETO</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">CORREO</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contenido">CONTENIDO</label>
+                    <textarea id="contenido" name="contenido" rows="4" required></textarea>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn-login">ENVIAR MENSAJE</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+</body>
+</html>
