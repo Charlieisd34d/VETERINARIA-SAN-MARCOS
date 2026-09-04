@@ -5,65 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinaria San Marcos - Contacto</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="funciones.js"></script>
+    <script src="funciones.js" defer></script>
 </head>
 <body>
 
-    <!-- Encabezado con navegación -->
-    <header class="navbar">
-        <div class="logo">
-            <span class="square-icon">■</span>
+    <header class="encabezado-principal">
+        <a href="pagina-principal.html" class="logo">
+            <span class="icono-logo" aria-hidden="true">■</span>
             <strong>Veterinaria San Marcos</strong>
-        </div>
-        <nav class="nav-links">
+        </a>
+        <nav class="nav-links" aria-label="Navegación principal">
             <a href="pagina-principal.html">Home</a> |
             <a href="productos.html">Productos</a> |
             <a href="blogs.html">Blogs</a> |
             <a href="contacto.html">Contacto</a> |
             <a href="inicio-sesion.html">Iniciar Sesión</a>
         </nav>
-        <div class="cart">
+        <aside class="icono-carrito">
             <a href="carrito.html" style="text-decoration: none; color: inherit;">🛒 Carrito (0)</a>
-        </div>
+        </aside>
     </header>
 
-    <!-- Contenedor Principal de Contacto -->
-    <main class="login-container">
-        
-        <!-- Logo -->
-        <div class="company-logo-placeholder">
-            <div class="x-box"></div>
-        </div>
+    <main>
+        <section id="contacto">
+            <figure class="company-logo-placeholder">
+                <span class="x-box" aria-hidden="true"></span>
+            </figure>
 
-        <!-- Nombre de la Empresa -->
-        <h1 class="company-title">Veterinaria San Marcos</h1>
+            <h1 class="company-title">Veterinaria San Marcos</h1>
 
-        <!-- Tarjeta del Formulario de Contactos -->
-        <div class="login-card">
-            <div class="login-header contact-header">FORMULARIO DE CONTACTOS</div>
-            
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="nombre">NOMBRE COMPLETO</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
+            <h2>Formulario de contactos</h2>
 
-                <div class="form-group">
-                    <label for="correo">CORREO</label>
-                    <input type="email" id="correo" name="correo" required>
-                </div>
+            <form id="contactForm" novalidate>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-                <div class="form-group">
-                    <label for="contenido">CONTENIDO</label>
-                    <textarea id="contenido" name="contenido" rows="4" required></textarea>
-                </div>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
 
-                <div class="btn-container">
-                    <button type="submit" class="btn-login">ENVIAR MENSAJE</button>
-                </div>
+                <label for="contenido">Contenido</label>
+                <textarea id="contenido" name="contenido" rows="4" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+                <p id="mensaje-estado" aria-live="polite"></p>
             </form>
-        </div>
-
+        </section>
     </main>
+
 </body>
 </html>
