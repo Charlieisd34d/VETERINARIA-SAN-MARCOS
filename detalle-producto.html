@@ -9,35 +9,159 @@
 </head>
 <body>
 
-  <header>
-    <h1>Veterinaria San Marcos</h1>
-    <nav>
-      <a href="pagina-principal.html">Inicio</a>
-      <a href="productos.html">Volver a Productos</a>
-      <a href="carrito.html">Carrito</a>
+  <header class="header">
+    <div class="logo">
+      <span class="square-icon">■</span>
+      <h1>Veterinaria San Marcos</h1>
+    </div>
+    <nav class="nav-principal">
+      <a href="pagina-principal.html">Home</a> |
+      <a href="productos.html" class="activo">Productos</a> |
+      <a href="nosotros.html">Nosotros</a> |
+      <a href="blogs.html">Blogs</a> |
+      <a href="contacto.html">Contacto</a>
     </nav>
+    <div class="carrito-status">
+      <a href="carrito.html">🛒 Carrito (0)</a>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <article>
-        <h2>Consulta General</h2>
-        <p><strong>Código:</strong> SV001</p>
-        <p><strong>Categoría:</strong> Consultas Médicas</p>
-        <p><strong>Especie Dirigida:</strong> Perro / Gato</p>
-        <p><strong>Duración Estimada:</strong> 30 minutos</p>
-        <p><strong>Descripción:</strong> Evaluación física preventiva o de control, revisión de signos vitales, anamnesis y diagnóstico inicial por parte de nuestros médicos veterinarios.</p>
-        <p><strong>Precio:</strong> $15.000 CLP</p>
+  <main class="main-container">
+
+
+    <div class="auth-links">
+      <a href="inicio-sesion.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a>
+    </div>
+
+  
+    <section class="hero-banner product-detail-banner">
+      <div class="hero-content">
+        <span class="product-code">CÓDIGO: SV001</span>
+        <h2>Consulta general</h2>
+        <p>Evaluación física preventiva o de control, revisión de signos vitales, anamnesis y diagnóstico inicial por parte de nuestros médicos veterinarios. Atendemos perros y gatos en Rancagua.</p>
         
-        <form action="carrito.html" method="GET">
-          <button type="submit">Añadir al Carrito de Solicitudes</button>
+        <div class="product-meta">
+          <p><strong>Categoría:</strong> Consultas[cite: 2]</p>
+          <p><strong>Especie:</strong> Perro / Gato[cite: 2]</p>
+          <p><strong>Duración:</strong> 30 min[cite: 2]</p>
+          <p class="detail-price"><strong>Precio:</strong> $15.000 CLP[cite: 2]</p>
+        </div>
+
+        <form action="carrito.html" method="GET" class="add-cart-form">
+          <input type="hidden" name="item_id" value="SV001">
+          <button type="submit" class="btn-hero">🛒 Añadir al Carrito de Solicitudes</button>
         </form>
-      </article>
+      </div>
+
+      <div class="hero-image-placeholder">
+        <div class="image-cross"></div>
+      </div>
     </section>
+
+    <section class="featured-products">
+      <h3 class="section-subtitle">Otros Productos y Servicios Relacionados</h3>
+      <div class="products-grid">
+        
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=SV002">Consulta urgencia</a></h3>
+          <div class="product-info">
+            <span class="attribute">Perro / Gato</span>
+            <span class="price">$25.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=VA001">Vacuna antirrábica</a></h3>
+          <div class="product-info">
+            <span class="attribute">Perro</span>
+            <span class="price">$12.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=VA002">Vacuna sextuple</a></h3>
+          <div class="product-info">
+            <span class="attribute">Perro</span>
+            <span class="price">$18.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=ME001">Amoxibay 250mg</a></h3>
+          <div class="product-info">
+            <span class="attribute">Antibióticos</span>
+            <span class="price">$4.200</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=ME004">Nexgard</a></h3>
+          <div class="product-info">
+            <span class="attribute">Antiparasitario</span>
+            <span class="price">$9.500</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=EX001">Hemograma completo</a></h3>
+          <div class="product-info">
+            <span class="attribute">Exámenes</span>
+            <span class="price">$22.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=ME009">Meloxicam 1mg</a></h3>
+          <div class="product-info">
+            <span class="attribute">Antiinflamatorio</span>
+            <span class="price">$4.500</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=OT003">Microchip</a></h3>
+          <div class="product-info">
+            <span class="attribute">Identificación</span>
+            <span class="price">$15.000</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Veterinaria San Marcos - Rancagua, Chile.</p>
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="site-name-footer">Veterinaria San Marcos</span>
+      <div class="payment-methods">
+        <span class="pay-card">VISA</span>
+        <span class="pay-card">MC</span>
+        <span class="pay-card">AMEX</span>
+      </div>
+    </div>
+
+    <div class="footer-center">
+      <a href="productos.html#consultas">Consultas y Cirugías</a> |
+      <a href="productos.html#vacunas">Vacunas y Exámenes</a> |
+      <a href="productos.html#farmacia">Farmacia Veterinaria</a>
+    </div>
+
+    <div class="footer-right">
+      <label for="newsletter-email">Stay In Touch! Join our Newsletter.</label>
+      <form class="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
   </footer>
 
 </body>

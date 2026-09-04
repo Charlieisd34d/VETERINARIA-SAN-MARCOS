@@ -9,44 +9,147 @@
 </head>
 <body>
 
-  <header>
-    <h1>Veterinaria San Marcos</h1>
-    <nav>
-      <a href="pagina-principal.html" class="activo">Inicio</a>
-      <a href="productos.html">Productos</a>
-      <a href="blogs.html">Blogs</a>
+  <header class="header">
+    <div class="logo">
+      <span class="square-icon">■</span>
+      <h1>Veterinaria San Marcos</h1>
+    </div>
+    <nav class="nav-principal">
+      <a href="pagina-principal.html" class="activo">Home</a> |
+      <a href="productos.html">Productos</a> |
+      <a href="#nosotros">Nosotros</a> |
+      <a href="blogs.html">Blogs</a> |
       <a href="contacto.html">Contacto</a>
-      <a href="carrito.html">Carrito</a>
-      <a href="inicio-sesion.html">Iniciar Sesión</a>
     </nav>
+    <div class="carrito-status">
+      <a href="carrito.html">🛒 Carito (0)</a>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Atención Médica Veterinaria en Rancagua</h2>
-      <p>Cuidamos la salud de tus mascotas con profesionalismo, ética y dedicación desde el año 2009.</p>
-      <a href="productos.html">Ver Servicios y Productos</a>
+  <main class="main-container">
+
+    <div class="auth-links">
+      <a href="inicio-sesion.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a>
+    </div>
+
+
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h2>TIENDA ONLINE</h2>
+        <p>Cuidamos la salud de tus mascotas en Rancagua con atención médica integral, vacunas, exámenes y farmacia especializada desde el año 2009.</p>
+        <a href="productos.html" class="btn-hero">🛒 ver productos</a>
+      </div>
+      <div class="hero-image-placeholder">
+        <div class="image-cross"></div>
+      </div>
     </section>
 
-    <section>
-      <h2>Nuestras Especialidades</h2>
-      <article>
-        <h3>Consultas Médicas General y Urgencias</h3>
-        <p>Atención integral para perros, gatos, aves y conejos con médicos veterinarios capacitados.</p>
-      </article>
-      <article>
-        <h3>Vacunación y Desparasitación</h3>
-        <p>Planes preventivos y carnet de salud al día para proteger a tus compañeros de hogar.</p>
-      </article>
-      <article>
-        <h3>Cirugías y Exámenes Clínicos</h3>
-        <p>Pabellón equipado para procedimientos de esterilización, profilaxis y exámenes de laboratorio.</p>
-      </article>
+    <section class="featured-products">
+      <div class="products-grid">
+        
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?id=SV001">Consulta general</a></h3>
+          <div class="product-info">
+            <span class="attribute">Perro / Gato</span>
+            <span class="price">$15.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?id=VA001">Vacuna antirrábica</a></h3>
+          <div class="product-info">
+            <span class="attribute">Perro / Gato</span>
+            <span class="price">$12.000</span>
+          </div>
+        </article>
+
+      
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?id=ME001">Amoxibay 250mg</a></h3>
+          <div class="product-info">
+            <span class="attribute">Antibióticos</span>
+            <span class="price">$4.200</span>
+          </div>
+        </article>
+
+        
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?id=ME004">Nexgard Antiparasitario</a></h3>
+          <div class="product-info">
+            <span class="attribute">Masticable Perro</span>
+            <span class="price">$9.500</span>
+          </div>
+        </article>
+
+        
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?id=OT002">Limpieza dental</a></h3>
+          <div class="product-info">
+            <span class="attribute">Requiere anestesia</span>
+            <span class="price">$55.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?id=SV002">Consulta urgencia</a></h3>
+          <div class="product-info">
+            <span class="attribute">Atención 24/7</span>
+            <span class="price">$25.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?id=ME011">Clorhexidina Shampoo</a></h3>
+          <div class="product-info">
+            <span class="attribute">Dermatología 250ml</span>
+            <span class="price">$8.900</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?id=OT003">Microchip identificación</a></h3>
+          <div class="product-info">
+            <span class="attribute">Incluye registro</span>
+            <span class="price">$15.000</span>
+          </div>
+        </article>
+
+      </div>
     </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Veterinaria San Marcos - Rancagua, Chile. Todos los derechos reservados.</p>
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="site-name-footer">Veterinaria San Marcos</span>
+      <div class="payment-methods">
+        <span class="pay-card">VISA</span>
+        <span class="pay-card">MC</span>
+        <span class="pay-card">AMEX</span>
+      </div>
+    </div>
+
+    <div class="footer-center">
+      <a href="productos.html#consultas">Consultas</a> |
+      <a href="productos.html#vacunas">Vacunación</a> |
+      <a href="productos.html#farmacia">Farmacia</a>
+    </div>
+
+    <div class="footer-right">
+      <label for="newsletter-email">Stay In Touch! Join our Newsletter.</label>
+      <form class="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
   </footer>
 
 </body>

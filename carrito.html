@@ -9,59 +9,177 @@
 </head>
 <body>
 
-  <header>
-    <h1>Veterinaria San Marcos</h1>
-    <nav>
-      <a href="pagina-principal.html">Inicio</a>
-      <a href="productos.html">Productos</a>
-      <a href="carrito.html" class="activo">Carrito (1)</a>
-      <a href="inicio-sesion.html">Iniciar Sesión</a>
+  <!-- Encabezado Superior -->
+  <header class="header">
+    <div class="logo">
+      <span class="square-icon">■</span>
+      <h1>Veterinaria San Marcos</h1>
+    </div>
+    <nav class="nav-principal">
+      <a href="pagina-principal.html">Home</a> |
+      <a href="productos.html">Productos</a> |
+      <a href="nosotros.html">Nosotros</a> |
+      <a href="blogs.html">Blogs</a> |
+      <a href="contacto.html">Contacto</a>
     </nav>
+    <div class="carrito-status">
+      <a href="carrito.html" class="activo">🛒 Cart (1)</a>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Mi carrito de compras</h2>
+  <main class="main-container">
 
-      <!-- Contenedor Principal (Simula las 2 columnas del Mockup Figura 15) -->
-      <div class="carrito-contenedor">
+    <!-- Enlaces de Autenticación -->
+    <div class="auth-links">
+      <a href="inicio-sesion.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a>
+    </div>
+
+    <!-- Banner Principal del Carrito -->
+    <section class="hero-banner cart-hero">
+      <div class="hero-content">
+        <h2>MI CARRITO DE SOLICITUDES</h2>
+        <p>Revisa las atenciones médicas, vacunas o fármacos seleccionados antes de proceder con el pago o agendamiento.</p>
         
-        <!-- Columna 1: Lista de Productos en el Carrito -->
-        <div class="carrito-lista">
-          <article class="carrito-item">
-            <img src="img/producto1.jpg" alt="Consulta General" width="100">
-            <div>
-              <h3>Consulta General</h3>
-              <p>Evaluación médica preventiva o de control para perro o gato.</p>
+        <!-- Resumen y Pago dentro de la tarjeta principal -->
+        <div class="cart-summary-box">
+          <p class="cart-total"><strong>TOTAL: $15.000 CLP</strong></p>
+          
+          <div class="coupon-group">
+            <label for="cupon">Ingrese el cupón de descuento:</label>
+            <div class="input-with-button">
+              <input type="text" id="cupon" name="cupon" placeholder="Ej: DESCUENTO10">
+              <button type="button" class="btn-secondary">APLICAR</button>
             </div>
-            <p><strong>$15.000 CLP</strong></p>
+          </div>
+
+          <a href="pagina-principal.html" class="btn-hero">PAGAR</a>
+        </div>
+      </div>
+
+      <!-- Item activo en el Carrito (Reemplaza espacio del Placeholder) -->
+      <div class="cart-items-preview">
+        <article class="product-card cart-item-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=SV001">Consulta general</a></h3>
+          <p class="cart-item-desc">Evaluación médica preventiva o de control para perro o gato en Rancagua[cite: 2].</p>
+          <div class="product-info">
             <div class="cantidad-control">
               <button type="button">-</button>
               <span>1</span>
               <button type="button">+</button>
             </div>
-          </article>
-        </div>
-
-        <!-- Columna 2: Resumen del Pedido / Cupón / Pagar -->
-        <aside class="carrito-resumen">
-          <h3>TOTAL: $15.000 CLP</h3>
-          
-          <div class="cupon-section">
-            <label for="cupon">Ingrese el cupón de descuento:</label>
-            <input type="text" id="cupon" name="cupon" placeholder="Ej: DESCUENTO10">
-            <button type="button">APLICAR</button>
+            <span class="price">$15.000 CLP</span>
           </div>
+        </article>
+      </div>
+    </section>
 
-          <a href="pagina-principal.html" class="btn-pagar">PAGAR</a>
-        </aside>
+    <!-- Grilla de Productos Sugeridos (8 tarjetas) -->
+    <section class="featured-products">
+      <h3 class="section-subtitle">Añade Servicios Adicionales a tu Pedido</h3>
+      <div class="products-grid">
+        
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=VA001">Vacuna antirrábica</a></h3>
+          <div class="product-info">
+            <span class="attribute">Perro / Gato[cite: 2]</span>
+            <span class="price">$12.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=DE001">Desparasitación interna</a></h3>
+          <div class="product-info">
+            <span class="attribute">Pequeños (&lt;10 kg)[cite: 2]</span>
+            <span class="price">$8.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=ME004">Nexgard</a></h3>
+          <div class="product-info">
+            <span class="attribute">Antiparasitario[cite: 2]</span>
+            <span class="price">$9.500</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=ME001">Amoxibay 250mg</a></h3>
+          <div class="product-info">
+            <span class="attribute">Antibióticos[cite: 2]</span>
+            <span class="price">$4.200</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=OT003">Microchip</a></h3>
+          <div class="product-info">
+            <span class="attribute">Identificación[cite: 2]</span>
+            <span class="price">$15.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=EX001">Hemograma completo</a></h3>
+          <div class="product-info">
+            <span class="attribute">Exámenes[cite: 2]</span>
+            <span class="price">$22.000</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=ME009">Meloxicam 1mg</a></h3>
+          <div class="product-info">
+            <span class="attribute">Antiinflamatorio[cite: 2]</span>
+            <span class="price">$4.500</span>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-img-placeholder"><div class="image-cross"></div></div>
+          <h3 class="product-title"><a href="detalle-producto.html?code=OT001">Corte de uñas</a></h3>
+          <div class="product-info">
+            <span class="attribute">Estética[cite: 2]</span>
+            <span class="price">$5.000</span>
+          </div>
+        </article>
 
       </div>
     </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2026 Veterinaria San Marcos - Rancagua, Chile.</p>
+  <!-- Pie de Página -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="site-name-footer">Veterinaria San Marcos</span>
+      <div class="payment-methods">
+        <span class="pay-card">VISA</span>
+        <span class="pay-card">MC</span>
+        <span class="pay-card">AMEX</span>
+      </div>
+    </div>
+
+    <div class="footer-center">
+      <a href="productos.html#consultas">Consultas y Cirugías</a> |
+      <a href="productos.html#vacunas">Vacunas y Exámenes</a> |
+      <a href="productos.html#farmacia">Farmacia Veterinaria</a>
+    </div>
+
+    <div class="footer-right">
+      <label for="newsletter-email">Stay In Touch! Join our Newsletter.</label>
+      <form class="newsletter-form">
+        <input type="email" id="newsletter-email" placeholder="Enter Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
   </footer>
 
 </body>
