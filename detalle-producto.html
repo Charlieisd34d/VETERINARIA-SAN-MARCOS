@@ -7,157 +7,51 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/funciones.js" defer></script>
 </head>
-<body>
+<body class="publico">
 
-  <header class="header">
-    <div class="logo">
-      <span class="square-icon">■</span>
-      <h1>Veterinaria San Marcos</h1>
-    </div>
+  <header class="cabezera-principal">
+    <a href="pagina-principal.html" class="logo">
+      <span class="icono-cuadrado">■</span>
+      <strong>Veterinaria San Marcos</strong>
+    </a>
     <nav class="nav-principal">
       <a href="pagina-principal.html">Home</a> |
-      <a href="productos.html" class="activo">Productos</a> |
-      <a href="nosotros.html">Nosotros</a> |
+      <a href="productos.html">Productos</a> |
       <a href="blogs.html">Blogs</a> |
       <a href="contacto.html">Contacto</a>
     </nav>
-    <div class="carrito-status">
-      <a href="carrito.html">🛒 Carrito (0)</a>
-    </div>
+    <aside class="icono-carrito">
+      <a href="carrito.html">🛒 Carrito (1)</a>
+    </aside>
   </header>
 
-  <main class="main-container">
+  <div class="main-container">
 
     <div class="auth-links">
       <a href="inicio-sesion.html">Iniciar sesión</a> | <a href="registro-usuario.html">Registrar usuario</a>
     </div>
 
     <section class="hero-banner product-detail-banner">
+      <img src="img/consulta-general.jpg" alt="Consulta médica general" class="hero-image">
+      
       <div class="hero-content">
-        <span class="product-code">CÓDIGO: SV001</span>
-        <h2>Consulta general</h2>
-        <p>Evaluación física preventiva o de control, revisión de signos vitales, anamnesis y diagnóstico inicial por parte de nuestros médicos veterinarios. Atendemos perros y gatos en Rancagua.</p>
+        <span class="product-code">COD: SV001</span>
+        <h2>Consulta médica general</h2>
+        <p>Atención médica presencial integral para perros y gatos. Incluye revisión clínica de signos vitales, pesaje, diagnóstico primario y receta médica emitida por un veterinario colegiado.</p>
         
         <div class="product-meta">
-          <p><strong>Categoría:</strong> Consultas</p>
-          <p><strong>Especie:</strong> Perro / Gato</p>
-          <p><strong>Duración:</strong> 30 min</p>
-          <p class="detail-price"><strong>Precio:</strong> $15.000 CLP</p>
+          <span class="attribute">Especie: Perros y Gatos</span>
+          <span class="detail-price">$15.000</span>
         </div>
 
-        <form action="carrito.html" method="GET" class="add-cart-form">
-          <input type="hidden" name="item_id" value="SV001">
-          <button type="submit" class="btn-hero">🛒 Añadir al Carrito de Solicitudes</button>
-        </form>
-      </div>
-
-      <img src="img/consulta-general.jpg" alt="Evaluación y revisión de signos vitales en consulta general" class="hero-image">
-    </section>
-
-    <section class="featured-products">
-      <h3 class="section-subtitle">Otros Productos y Servicios Relacionados</h3>
-      <div class="products-grid">
-        
-        <article class="product-card">
-          <img src="img/consulta-urgencia.jpg" alt="Atención veterinaria inmediata de urgencia" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=SV002">Consulta urgencia</a></h3>
-          <div class="product-info">
-            <span class="attribute">Perro / Gato</span>
-            <span class="price">$25.000</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/vacuna-antirrabica.jpg" alt="Aplicación de vacuna antirrábica" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=VA001">Vacuna antirrábica</a></h3>
-          <div class="product-info">
-            <span class="attribute">Perro</span>
-            <span class="price">$12.000</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/vacuna-sextuple.jpg" alt="Inmunización con vacuna séxtuple" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=VA002">Vacuna sextuple</a></h3>
-          <div class="product-info">
-            <span class="attribute">Perro</span>
-            <span class="price">$18.000</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/amoxibay.jpg" alt="Medicamento antibiótico Amoxibay" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=ME001">Amoxibay 250mg</a></h3>
-          <div class="product-info">
-            <span class="attribute">Antibióticos</span>
-            <span class="price">$4.200</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/nexgard.jpg" alt="Protección antiparasitaria externa Nexgard" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=ME004">Nexgard</a></h3>
-          <div class="product-info">
-            <span class="attribute">Antiparasitario</span>
-            <span class="price">$9.500</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/hemograma.jpg" alt="Análisis clínico de laboratorio hemograma" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=EX001">Hemograma completo</a></h3>
-          <div class="product-info">
-            <span class="attribute">Exámenes</span>
-            <span class="price">$22.000</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/meloxicam.jpg" alt="Analgesico y antiinflamatorio Meloxicam" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=ME009">Meloxicam 1mg</a></h3>
-          <div class="product-info">
-            <span class="attribute">Antiinflamatorio</span>
-            <span class="price">$4.500</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/microchip.jpg" alt="Implantación de microchip de identificación" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=OT003">Microchip</a></h3>
-          <div class="product-info">
-            <span class="attribute">Identificación</span>
-            <span class="price">$15.000</span>
-          </div>
-        </article>
-
+        <a href="carrito.html" class="btn-hero">🛒 Añadir al carrito</a>
       </div>
     </section>
 
-  </main>
+  </div>
 
-  <footer class="footer">
-    <div class="footer-left">
-      <span class="site-name-footer">Veterinaria San Marcos</span>
-      <div class="payment-methods">
-        <span class="pay-card">VISA</span>
-        <span class="pay-card">MasterCard</span>
-        <span class="pay-card">Mercado Pago</span>
-      </div>
-    </div>
-
-    <div class="footer-center">
-      <a href="productos.html#consultas">Consultas y Cirugías</a> |
-      <a href="productos.html#vacunas">Vacunas y Exámenes</a> |
-      <a href="productos.html#farmacia">Farmacia Veterinaria</a>
-    </div>
-
-    <div class="footer-right">
-      <label for="newsletter-email">¡Mantente en contacto! Regístrate en nuestro boletín.</label>
-      <form class="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Ingrese su correo electrónico" required>
-        <button type="submit">Registrate</button>
-      </form>
-    </div>
+  <footer class="pie-pagina">
+    <p>&copy; 2026 Veterinaria San Marcos. Todos los derechos reservados.</p>
   </footer>
 
 </body>

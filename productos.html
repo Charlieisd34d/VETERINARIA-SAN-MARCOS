@@ -3,147 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Veterinaria San Marcos - Catálogo de Productos y Servicios</title>
+  <title>Veterinaria San Marcos - Productos</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/funciones.js" defer></script>
 </head>
-<body>
+<body class="publico">
 
-  <header class="header">
-    <div class="logo">
-      <span class="square-icon">■</span>
-      <h1>Veterinaria San Marcos</h1>
-    </div>
+  <header class="cabezera-principal">
+    <a href="pagina-principal.html" class="logo">
+      <span class="icono-cuadrado">■</span>
+      <strong>Veterinaria San Marcos</strong>
+    </a>
     <nav class="nav-principal">
       <a href="pagina-principal.html">Home</a> |
       <a href="productos.html" class="activo">Productos</a> |
-      <a href="#nosotros">Nosotros</a> |
       <a href="blogs.html">Blogs</a> |
       <a href="contacto.html">Contacto</a>
     </nav>
-    <div class="carrito-status">
+    <aside class="icono-carrito">
       <a href="carrito.html">🛒 Carrito (0)</a>
-    </div>
+    </aside>
   </header>
 
-  <main class="main-container">
+  <div class="main-container">
 
     <div class="auth-links">
       <a href="inicio-sesion.html">Iniciar sesión</a> | <a href="registro-usuario.html">Registrar usuario</a>
     </div>
 
-    <section class="hero-banner">
-      <div class="hero-content">
-        <h2>CATÁLOGO VETERINARIO</h2>
-        <p>Explora nuestra gama de prestaciones médicas, cirugías, exámenes clínicos y medicamentos para perros, gatos y otras mascotas con entrega y atención inmediata.</p>
-        <a href="#catalogo-grid" class="btn-hero">🛒 ver productos</a>
-      </div>
-      <img src="img/banner-productos.jpg" alt="Catálogo completo de servicios médicos, vacunas y fármacos veterinarios" class="hero-image">
-    </section>
+    <section class="featured-products">
+      <h2 class="section-subtitle">Catálogo de Productos y Servicios</h2>
 
-    <section id="catalogo-grid" class="featured-products">
       <div class="products-grid">
         
         <article class="product-card">
-          <img src="img/consulta-preventiva.jpg" alt="Consulta médica preventiva de control" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=SV001">Consulta general</a></h3>
+          <img src="img/consulta-general.jpg" alt="Consulta médica general" class="product-img">
+          <h3 class="product-title"><a href="detalle-producto.html?id=SV001">Consulta general</a></h3>
           <div class="product-info">
-            <span class="attribute">Perro / Gato (30 min)</span>
+            <span class="attribute">Perro / Gato</span>
             <span class="price">$15.000</span>
           </div>
         </article>
 
         <article class="product-card">
-          <img src="img/vacuna-sextuple.jpg" alt="Vacuna séxtuple para protección canina" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=VA002">Vacuna sextuple canina</a></h3>
+          <img src="img/vacuna-antirrabica.jpg" alt="Vacuna antirrábica" class="product-img">
+          <h3 class="product-title"><a href="detalle-producto.html?id=VA001">Vacuna antirrábica</a></h3>
           <div class="product-info">
-            <span class="attribute">Perro (10 min)</span>
-            <span class="price">$18.000</span>
+            <span class="attribute">Perro / Gato</span>
+            <span class="price">$12.000</span>
           </div>
         </article>
 
         <article class="product-card">
-          <img src="img/esterilizacion.jpg" alt="Pabellón para cirugía de esterilización de hembra canina" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=CI001">Esterilización hembra canina</a></h3>
+          <img src="img/amoxibay.jpg" alt="Amoxibay 250mg" class="product-img">
+          <h3 class="product-title"><a href="detalle-producto.html?id=ME001">Amoxibay 250mg</a></h3>
           <div class="product-info">
-            <span class="attribute">Perra (90 min)</span>
-            <span class="price">$80.000</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/hemograma.jpg" alt="Tubo de muestra para examen de hemograma completo" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=EX001">Hemograma completo</a></h3>
-          <div class="product-info">
-            <span class="attribute">Exámenes (30 min)</span>
-            <span class="price">$22.000</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/amoxibay.jpg" alt="Blíster de tabletas de Amoxibay 250mg" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=ME001">Amoxibay 250mg</a></h3>
-          <div class="product-info">
-            <span class="attribute">Blíster 10 comp.</span>
+            <span class="attribute">Antibióticos</span>
             <span class="price">$4.200</span>
           </div>
         </article>
 
         <article class="product-card">
-          <img src="img/bravecto.jpg" alt="Antiparasitario masticable Bravecto" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=ME005">Bravecto Masticable</a></h3>
+          <img src="img/nexgard.jpg" alt="Nexgard Antiparasitario" class="product-img">
+          <h3 class="product-title"><a href="detalle-producto.html?id=ME004">Nexgard Antiparasitario</a></h3>
           <div class="product-info">
-            <span class="attribute">Antiparasitario Perro</span>
-            <span class="price">$18.900</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/meloxicam.jpg" alt="Antiinflamatorio veterinario Meloxicam 1mg" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=ME009">Meloxicam 1mg</a></h3>
-          <div class="product-info">
-            <span class="attribute">Blíster 10 comp.</span>
-            <span class="price">$4.500</span>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <img src="img/apoquel.jpg" alt="Tratamiento dermatológico Apoquel 16mg" class="product-img">
-          <h3 class="product-title"><a href="detalle-producto.html?code=ME013">Apoquel 16mg</a></h3>
-          <div class="product-info">
-            <span class="attribute">Dermatología Perro</span>
-            <span class="price">$22.000</span>
+            <span class="attribute">Masticable Perro</span>
+            <span class="price">$9.500</span>
           </div>
         </article>
 
       </div>
     </section>
 
-  </main>
+  </div>
 
-  <footer class="footer">
-    <div class="footer-left">
-      <span class="site-name-footer">Veterinaria San Marcos</span>
-      <div class="payment-methods">
-        <span class="pay-card">VISA</span>
-        <span class="pay-card">MasterCard</span>
-        <span class="pay-card">Mercado Pago</span>
-      </div>
-    </div>
-
-    <div class="footer-center">
-      <a href="#consultas">Consultas y Cirugías</a> |
-      <a href="#vacunas">Vacunas y Exámenes</a> |
-      <a href="#farmacia">Farmacia Veterinaria</a>
-    </div>
-
-    <div class="footer-right">
-      <label for="newsletter-email">¡Mantente en contacto! Regístrate en nuestro boletín.</label>
-      <form class="newsletter-form">
-        <input type="email" id="newsletter-email" placeholder="Ingrese su correo electrónico" required>
-        <button type="submit">Registrate</button>
-      </form>
-    </div>
+  <footer class="pie-pagina">
+    <p>&copy; 2026 Veterinaria San Marcos. Todos los derechos reservados.</p>
   </footer>
 
 </body>
