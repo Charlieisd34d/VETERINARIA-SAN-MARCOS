@@ -1067,6 +1067,330 @@ body {
     color: #2b2d42;
 }
 
+/* Header / Cabecera Principal */
+
+.header {
+    width: 100%;
+    background-color: #005f73;
+    color: var(--color-blanco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header .logo h1 {
+    font-size: 1.4rem;
+    color: var(--color-blanco);
+}
+
+.header .square-icon {
+    color: #94d2bd;
+    font-size: 1.2rem;
+}
+
+.header .nav-principal {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.header .nav-principal a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.header .nav-principal a.activo,
+.header .nav-principal a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.header .carrito-status a {
+    background-color: #0a9396;
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.header .carrito-status a:hover {
+    background-color: #94d2bd;
+    color: #005f73;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    width: 100%;
+}
+
+.auth-links {
+    text-align: right;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.auth-links a {
+    color: #005f73;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Banner Principal / Hero */
+
+.hero-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background-color: var(--color-blanco);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2.5rem;
+}
+
+.hero-content h2 {
+    color: #005f73;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #0a9396;
+    color: var(--color-blanco);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-hero:hover {
+    background-color: #005f73;
+}
+
+.hero-image, .hero-image-placeholder {
+    width: 100%;
+    height: 280px;
+    object-fit: contain; 
+    border-radius: 8px;
+    background-color: #f4f7f6; 
+}
+
+
+/* Detalle del producto */
+
+.product-detail-banner .product-code {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product-meta {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-meta .detail-price {
+    font-size: 1.25rem;
+    color: #0a9396;
+}
+
+/* Cuadrícula de Productos */
+
+.featured-products {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+.section-subtitle {
+    color: #005f73;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.product-img, .product-img-placeholder {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #edf2f7;
+    margin-bottom: 0.75rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-title a {
+    color: #2b2d42;
+    text-decoration: none;
+}
+
+.product-title a:hover {
+    color: #0a9396;
+}
+
+.product-info {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.product-info .attribute {
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.product-info .price {
+    font-weight: bold;
+    color: #0a9396;
+    font-size: 1.05rem;
+}
+
+/* Pie de página Catálogo */
+
+.footer {
+    background-color: #2b2d42;
+    color: var(--color-blanco);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.footer a {
+    color: #94d2bd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-left .site-name-footer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pay-card {
+    background-color: #3a3d5c;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-right label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    flex: 1;
+}
+
+.newsletter-form button {
+    background-color: #0a9396;
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.newsletter-form button:hover {
+    background-color: #94d2bd;
+    color: #2b2d42;
+}
+
+
+
+
 /* Agregamos que el diseño sea responsivo y de esta manera se adapte a moviles*/
 
 @media (max-width: 1100px) {
