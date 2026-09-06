@@ -4,61 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Blogs</title>
+    <title>Blogs - Veterinaria San Marco</title>
 </head>
 
-<body>
-    <header class= "cabezera-principal">
-        <selector class="marca">
-            <span class="logo-icono">■</span>
-            <span class="nombre-sito">Veterinario  San Marco</span>
-        </selector>
-        <nav>
+<body class="pagina-publica">
+    <header class="cabecera-principal">
+        <div class="marca">
+            <a 
+                class="enlace-marca" href="index.html"><img class="logo-marca" src="img/logo_veterinaria.png" alt="Logotipo verterinaria">
+            </a>
+        </div>
+
+        <nav class="navegacion-principal">
             <ul>
-                <a href="index.html">Home</a>
-                <a href="productos.html">Productos</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="blogs.html" class="activo">Blogs</a>
-                <a href="contacto.html">Contacto</a>
+                <li><a href="index.html">Home</a></li>
+                <li class="separador">|</li>
+                <li><a href="productos.html">Productos</a></li>
+                <li class="separador">|</li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li class="separador">|</li>
+                <li><a href="blogs.html" class="activo">Blogs</a></li>
+                <li class="separador">|</li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <selector class="carrito">
-            <span class="carrito-icono">🛒</span>
-            <span class="carrito-contador">Carrito(0)</span>
+
+        <div class="carrito">
+            <a href="carrito.html"><i class="bi bi-cart3"></i>Carrito (0)</a>
         </div>
     </header>
-    <main>
 
-        <h1 class="titulo-principal">Noticias Importantes</h1>
+    <main class="principal">
 
-        <article class="tajeta-caso">
-            <section class="contenido-caso">
-                <h2>Caso Curioso #1</h2>
-                <p>
-                    Our North American field guiedes provide tips for identifying birds in all the regions of the <br>
-                    United States and Canada. Download any of our guides for free now!
-                </p>
-                <a href="detalle-blog-#1" class="boton">Ver Caso</a>
-                <img src="img/caso-1.jpg" alt="Imagen referente al Caso Curioso #1">
-            </section>
-        </article>
+        <h1 class="titulo">Noticias Importantes</h1>
 
-        <article class="tarjeta-caso">
-            <section class="detalle-caso">
-                <h3>Caso Curioso #2</h3>
-                <p>
-                    Our North American field guiedes provide tips for identifying birds in all the regions of the <br>
-                    United States and Canada. Download any of our guides for free now!
-                </p>
-                <a href="detalle-blog-#2" class="boton">Ver Caso</a>
-                <img src="img/caso-2.jpg" alt="Imagen referente al Caso Curioso #2">
-            </section>
-        </article>
+        <section class="contenido">
+                <article class="tarjeta-blog">
+                    <div class="detalle-blog">
+                        <h2 class="subtitulo-blog">CASO CURIOSO #1</h2>
+                        <p>
+                            Our North American Field Guides provide tips for identifying birds in all of the regions of
+                            the
+                            United States and Canada. Download any of our guides for free now!
+                        </p>
+                        <a href="detalle-blog-1.html" class="boton-casos">VER CASO <i
+                                class="bi bi-caret-down-fill"></i></a>
+                    </div>
+                    <div class="contenedor-imagen">
+                        <img src="img/caso-1.jpg" alt="Caso Curioso #1" class="imagen-blog">
+                    </div>
+                </article>
+
+                <article class="tarjeta-blog">
+                    <div class="detalle-blog">
+                        <h2 class="subtitulo-blog">CASO CURIOSO #2</h2>
+                        <p>
+                            Our North American Field Guides provide tips for identifying birds in all of the regions of
+                            the
+                            United States and Canada. Download any of our guides for free now!
+                        </p>
+                        <a href="detalle-blog-2.html" class="boton-casos">VER CASO <i
+                                class="bi bi-caret-down-fill"></i></a>
+                    </div>
+                    <div class="contenedor-imagen">
+                        <img src="img/caso-2.jpg" alt="Caso Curioso #2" class="imagen-blog">
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-    <footer>
-        <p>©2026 Site Name. Todos los derechos reservados.</p>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Veterinaria San Marco. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
