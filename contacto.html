@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinaria San Marcos - Contacto</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="funciones.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/funciones.js" defer></script>
 </head>
-<body>
+<body class="publico">
 
-    <header class="encabezado-principal">
+    <header class="cabezera-principal">
         <a href="pagina-principal.html" class="logo">
-            <span class="icono-logo" aria-hidden="true">■</span>
+            <span class="icono-cuadrado">■</span>
             <strong>Veterinaria San Marcos</strong>
         </a>
-        <nav class="nav-links" aria-label="Navegación principal">
+        <nav class="nav-principal">
             <a href="pagina-principal.html">Home</a> |
             <a href="productos.html">Productos</a> |
             <a href="blogs.html">Blogs</a> |
@@ -22,21 +22,21 @@
             <a href="inicio-sesion.html">Iniciar Sesión</a>
         </nav>
         <aside class="icono-carrito">
-            <a href="carrito.html" style="text-decoration: none; color: inherit;">🛒 Carrito (0)</a>
+            <a href="carrito.html">🛒 Carrito (0)</a>
         </aside>
     </header>
 
     <main>
         <section id="contacto">
-            <figure class="company-logo-placeholder">
-                <span class="x-box" aria-hidden="true"></span>
+            <figure class="logo-veterinaria">
+                <img src="img/logo.png" alt="Logo San Marcos" class="logo-img">
             </figure>
 
-            <h1 class="company-title">Veterinaria San Marcos</h1>
+            <h1 class="titulo-form">Veterinaria San Marcos</h1>
+            
+            <h2 class="subtitulo-form">Formulario de contactos</h2>
 
-            <h2>Formulario de contactos</h2>
-
-            <form id="contactForm" novalidate>
+            <form id="formulario-contacto" novalidate>
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -51,6 +51,8 @@
             </form>
         </section>
     </main>
-
+    <footer>
+        <p>&copy; 2026 Veterinaria San Marco. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>

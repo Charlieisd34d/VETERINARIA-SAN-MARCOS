@@ -23,7 +23,7 @@ ul {
   list-style-type: none;
 }
 
-/* Establecemos las variables del panel administrativo */
+/* Establecemos las variables del panel administrativo y público*/
 
 .admin{
     display: flex;
@@ -34,6 +34,22 @@ ul {
     --admin-sidebar-hover: #374151; 
     --admin-acento: #4caf50; 
     --admin-borde: #e5e7eb;
+}
+
+.publico {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    --publico-fondo-p: #f4f7f6;
+    --publico-header-p: #005f73;
+    --publico-acento-p: #0a9396;
+    --publico-acento-hover-p: #005f73;
+    --publico-detalle-p: #94d2bd;
+    --publico-card-p: #ffffff;
+    --publico-texto-label-p: #2b2d42;
+    --publico-borde-p: #cccccc;
+    --publico-footer-p: #2b2d42;
 }
 
 /* Establesco la configuracion general */
@@ -289,6 +305,213 @@ body{
     font-weight: 700;
 }
 
+/* Estilo para la vista pública (Formularios)*/
+.publico .cabezera-principal {
+    width: 100%;
+    background-color: var(--publico-header-p);
+    color: var(--color-blanco);
+    padding: var(--espaciado-sm) var(--espaciado-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espaciado-sm);
+}
+
+.publico .cabezera-principal a {
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+.publico .cabezera-principal a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del logotipo en cabecera */
+
+.publico .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-xs);
+    font-size: 1.2rem;
+}
+
+.publico .icono-cuadrado {
+    color: var(--publico-detalle-p);
+    font-size: 1.1rem;
+}
+
+/* Barra de navegacion del sitio */
+
+.publico .nav-principal {
+    display: flex;
+    gap: var(--espaciado-xs);
+    align-items: center;
+}
+
+/* Icono del carrito */
+
+.publico .icono-carrito a {
+    background-color: var(--publico-acento-p);
+    padding: var(--espaciado-xs) 0.8rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.publico .icono-carrito a:hover {
+    background-color: var(--publico-detalle-p);
+    color: var(--publico-header-p);
+    text-decoration: none;
+}
+
+/* Contenido principal */
+
+.publico main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--espaciado-lg) var(--espaciado-sm);
+}
+
+.publico section {
+    background-color: var(--publico-card-p);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Logotipo dentro de la seccion */
+
+.publico .logo-veterinaria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--espaciado-sm);
+}
+
+.publico .logo-img {
+    max-width: 160px;
+    height: auto;
+    display: block;
+}
+
+/* Estilos de titulos */
+
+.publico .titulo-form {
+    text-align: center;
+    color: var(--publico-header-p);
+    font-size: 1.8rem;
+    margin-bottom: var(--espaciado-xs);
+}
+
+.publico .subtitulo-form {
+    text-align: center;
+    color: var(--publico-acento-p);
+    font-size: 1.3rem;
+    margin-bottom: var(--espaciado-md);
+}
+
+/* Estilizando los formularios */
+
+.publico form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.publico label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--publico-texto-label-p);
+    margin-top: 0.4rem;
+}
+
+.publico input[type="text"],
+.publico input[type="email"],
+.publico input[type="password"],
+.publico input[type="tel"],
+.publico textarea,
+.publico select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid var(--publico-borde-p);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.publico input:focus,
+.publico textarea:focus,
+.publico select:focus {
+    outline: none;
+    border-color: var(--publico-acento-p);
+    box-shadow: 0 0 4px rgba(10, 147, 150, 0.4);
+}
+
+.publico textarea {
+    resize: vertical;
+}
+
+.publico .grupo-region-comuna {
+    border: none;
+    padding: 0;
+    margin: var(--espaciado-xs) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.publico .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Boton de envio */
+
+.publico button[type="submit"] {
+    background-color: var(--publico-acento-p);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: var(--espaciado-sm);
+    transition: background-color 0.2s ease;
+}
+
+.publico button[type="submit"]:hover {
+    background-color: var(--publico-acento-hover-p);
+}
+
+.publico #mensaje-estado {
+    text-align: center;
+    font-weight: bold;
+    margin-top: var(--espaciado-xs);
+}
+
+/* Pie de pagina */
+
+.publico footer,
+.publico .pie-pagina {
+    background-color: var(--publico-footer-p);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: var(--espaciado-sm);
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
 /* Agregamos que el diseño sea responsivo y de esta manera se adapte a moviles*/
 
 @media (max-width: 1100px) {
@@ -311,4 +534,16 @@ body{
     .admin .contenido {
         padding: 1.25rem;
     }
+
+    @media (max-width: 768px) {
+    .publico .cabezera-principal {
+        padding: var(--espaciado-sm) 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .publico section {
+        padding: var(--espaciado-md);
+    }
+  }
 }
