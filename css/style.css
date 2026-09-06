@@ -814,6 +814,15 @@ body {
     margin-top: var(--espaciado-xs);
 }
 
+/* Clases de estado dinámicas */
+.publico #mensaje-estado.exito {
+    color: var(--publico-acento-p);
+}
+
+.publico #mensaje-estado.error {
+    color: #d90429;
+}
+
 /* Pie de pagina */
 
 .publico footer,
