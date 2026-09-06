@@ -305,6 +305,70 @@ body{
     font-weight: 700;
 }
 
+/* Contenido izquierdo de la cabecera */
+
+.admin .cabecera-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Botones principales */
+
+.admin .boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.65rem 1rem;
+
+    background-color: var(--admin-acento);
+    color: var(--color-blanco);
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
+}
+
+.admin .boton:hover {
+    background-color: #3d9140;
+}
+
+/* Filtro de productos */
+
+.admin .filtro-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.admin .filtro-contenedor label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.admin .selector-filtro {
+    min-width: 200px;
+
+    padding: 0.65rem 0.75rem;
+
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+
+    border: 1px solid var(--admin-borde);
+    border-radius: 8px;
+
+    font-size: 0.9rem;
+
+    cursor: pointer;
+}
+
 /* Estilo para la vista pública (Formularios)*/
 
 .publico .cabezera-principal {
