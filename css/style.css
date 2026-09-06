@@ -305,7 +305,9 @@ body{
     font-weight: 700;
 }
 
+
 /* Estilo para la vista pública (Formularios)*/
+
 .publico .cabezera-principal {
     width: 100%;
     background-color: var(--publico-header-p);
