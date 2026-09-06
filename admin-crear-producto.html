@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="funciones.js" defer></script>
-    <title>admin-crear-usuario</title>
+    <title>admin-crear-producto</title>
 </head>
 
-<body>
+<body class="admin">
     <aside class="barra-lateral">
         <header class="logotipo">
             <a class="enlace-marca" href="admin-home.html">
@@ -64,7 +64,7 @@
                 </li>
             </ul>
 
-            <ul class="menu menu-inferior">
+            <ul class="menu menu-secundario">
                 <li class="item-menu">
                     <a class="enlace-menu" href="configuracion.html">
                         <i class="bi bi-gear"></i> Configuración
@@ -86,7 +86,7 @@
         </nav>
 
         <footer class="pie-barra-lateral">
-            <a class="enlace-manu" href="perfil.html">
+            <a class="perfil" href="perfil.html">
                 <i class="bi bi-person-circle"></i> Perfil
             </a>
         </footer>
@@ -95,46 +95,44 @@
     <main class="principal">
 
         <header class="cabecera">
-            <h1>Registro de Producto</h1>
+            <h1 class="titulo">Registro de Producto</h1>
         </header>
 
-        <section>
-            <form class="tarjeta-formulario">
+        <form class="tarjeta-formulario">
 
-                <label for="codigo-producto" class="etiqueta">Codigo Producto</label>
-                <input type="text" id="codigo-producto" class="campo" required>
+            <label for="codigo-producto" class="etiqueta">Codigo Producto</label>
+            <input type="text" id="codigo-producto" name="codigo-producto" class="campo" required>
 
-                <label for="nombre" class="etiqueta">Nombre</label>
-                <input type="text" id="nombre" class="campo" required>
+            <label for="nombre" class="etiqueta">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="campo" required>
 
-                <label for="descripcion" class="etiqueta">Descripción</label>
-                <input type="text" class="campo" name="descripcion">
+            <label for="descripcion" class="etiqueta">Descripción</label>
+            <textarea class="campo" id="descripcion" name="descripcion"></textarea>
 
-                <label for="precio" class="etiqueta">Precio</label>
-                <input type="number" id="precio" name="precio" class="campo" min="0">
+            <label for="precio" class="etiqueta">Precio</label>
+            <input type="number" id="precio" name="precio" class="campo" min="0" required>
 
-                <label for="stock" class="etiqueta">Stock</label>
-                <input type="number" id="stock" name="stock" min="0" class="campo" required>
+            <label for="stock" class="etiqueta">Stock</label>
+            <input type="number" id="stock" name="stock" min="0" class="campo" required>
 
-                <div class="alerta" id="alerta-stock">
-                    <p>
-                        El stock es inferior o igual a 0
-                    </p>
-                </div>
+            <div class="alerta" id="alerta-stock">
+                <p>
+                    El stock debe ser mayor que 0.
+                </p>
+            </div>
 
-                <label for="categoria" class="etiqueta">Seleccione la categoria</label>
-                <select name="categoria" id="categoria" class="campo">
-                    <option value="valor1">Elige una opción</option>
-                    <option value="valor2">Farmacia</option>
-                    <option value="valor3">Alimentación</option>
-                    <option value="valor4">Higiene</option>
-                    <option value="valor5">Accesorios y Bienestar</option>
-                </select>
+            <label for="categoria" class="etiqueta">Seleccione la categoria</label>
+            <select name="categoria" id="categoria" class="campo" required>
+                <option value="">Elige una opción</option>
+                <option value="farmacia">Farmacia</option>
+                <option value="alimentacion">Alimentación</option>
+                <option value="higiene">Higiene</option>
+                <option value="accesorios-bienestar">Accesorios y Bienestar</option>
+            </select>
 
-                <button type="submit" class="boton">Enviar</button>
-                <p id="confirmacion"></p>
-            </form>
-        </section>
+            <button type="submit" class="boton">Registrar Producto</button>
+            <p id="confirmacion"></p>
+        </form>
     </main>
 </body>
 

@@ -8,7 +8,7 @@
 
 /* Establecemos las variables generales que usaremos */
 
-:root{
+:root {
     --fuente-principal: Arial, sans-serif;
     --color-texto: #222222;
     --color-blanco: #ffffff;
@@ -20,19 +20,19 @@
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 /* Establecemos las variables del panel administrativo y público*/
 
-.admin{
+.admin {
     display: flex;
     min-height: 100vh;
 
-    --admin-fondo: #f5f6fa; 
-    --admin-sidebar: #1f2937; 
-    --admin-sidebar-hover: #374151; 
-    --admin-acento: #4caf50; 
+    --admin-fondo: #f5f6fa;
+    --admin-sidebar: #1f2937;
+    --admin-sidebar-hover: #374151;
+    --admin-acento: #4caf50;
     --admin-borde: #e5e7eb;
 }
 
@@ -54,7 +54,7 @@ ul {
 
 /* Establesco la configuracion general */
 
-body{
+body {
     min-height: 100vh;
     font-family: var(--fuente-principal);
     color: var(--color-texto);
@@ -62,28 +62,28 @@ body{
 
 /* Barra Lateral*/
 
-.admin .barra-lateral { 
-    width: 250px; 
+.admin .barra-lateral {
+    width: 250px;
     min-width: 0;
-    min-height: 100vh; 
-    display: flex; 
-    flex-direction: column; 
-    background-color: var(--admin-sidebar); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--admin-sidebar);
 }
 
 /* Contenido principal del apartado administrativo*/
 
-.admin .principal { 
-    flex: 1; 
-    min-width: 0; 
-    min-height: 100vh; 
-    display: flex; 
-    flex-direction: column; 
+.admin .principal {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilo del logotipo */
 
-.admin .logotipo{
+.admin .logotipo {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -99,7 +99,7 @@ body{
     text-decoration: none;
 }
 
-.admin .logo-marca{
+.admin .logo-marca {
     display: block;
     width: 170px;
     height: auto;
@@ -126,24 +126,24 @@ body{
 
 /*Estilo de los elementos del menu*/
 
-.admin .item-menu{
+.admin .item-menu {
     width: 100%;
 }
 
 /*Estilizando los enlaces*/
 
-.admin .enlace-menu { 
-    width: 100%; 
-    min-height: 48px; 
-    display: flex; 
-    align-items: center; 
-    padding: 0.75rem 1rem; 
-    border-radius: 8px; 
-    color: var(--color-blanco); 
-    text-decoration: none; 
-    font-size: 0.95rem; 
-    font-weight: 500; 
-    transition: background-color 0.2s ease, color 0.2s ease; 
+.admin .enlace-menu {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Estilizando los iconos*/
@@ -161,11 +161,11 @@ body{
     background-color: var(--admin-sidebar-hover);
 }
 
-.admin .item-menu.activo .enlace-menu:hover{
+.admin .item-menu.activo .enlace-menu:hover {
     background-color: var(--admin-acento);
 }
 
-.admin .menu-secundario{
+.admin .menu-secundario {
     margin-top: auto;
     padding-top: 1rem;
     border-top: 1px solid var(--admin-borde);
@@ -173,30 +173,35 @@ body{
 
 /* Estilizamos el pie del menu secundario*/
 
-.admin .pie-barra-lateral { 
-    width: 100%; 
-    padding: 1rem 0.75rem; 
+.admin .pie-barra-lateral {
+    width: 100%;
+    padding: 1rem 0.75rem;
     border-top: 1px solid var(--admin-borde);
 }
 
-.admin .perfil { min-height: 48px; display: 
-    flex; align-items: center; 
-    padding: 0.75rem 1rem; 
-    border-radius: 8px; 
-    color: var(--color-blanco); 
+.admin .perfil {
+    min-height: 48px;
+    display:
+        flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    color: var(--color-blanco);
     text-decoration: none;
-    font-size: 0.95rem; 
-    font-weight: 500; 
-    transition: background-color 0.2s ease, color 0.2s ease; 
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.admin .perfil i { width: 24px;
+.admin .perfil i {
+    width: 24px;
     margin-right: 0.75rem;
-    font-size: 1.2rem; 
-    text-align: center; } 
-    
-.admin .perfil:hover { 
-    background-color: var(--admin-sidebar-hover); 
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.admin .perfil:hover {
+    background-color: var(--admin-sidebar-hover);
 }
 
 /* Estilizando la cabecera del panel administrativo*/
@@ -274,6 +279,59 @@ body{
     border-radius: 12px;
 
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Formulario de registro de producto */
+
+.admin .tarjeta-formulario {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--color-blanco);
+    border: 1px solid var(--admin-borde);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.admin .etiqueta {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-texto);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.admin .campo {
+    width: 100%;
+    padding: 0.7rem 0.75rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    border: 1px solid var(--admin-borde);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.admin .campo:focus {
+    outline: none;
+    border-color: var(--admin-acento);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15);
+}
+
+/* Alerta generica*/
+
+.admin .alerta {
+    display: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    font-size: 0.9rem;
 }
 
 .admin .icono-estadistica {
@@ -685,6 +743,330 @@ body{
     font-size: 0.9rem;
 }
 
+/*======================= 
+ Parte de almendra que tengo que corregir
+ =========================*/
+/* Header / Cabecera Principal */
+
+.header {
+    width: 100%;
+    background-color: #005f73;
+    color: var(--color-blanco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header .logo h1 {
+    font-size: 1.4rem;
+    color: var(--color-blanco);
+}
+
+.header .square-icon {
+    color: #94d2bd;
+    font-size: 1.2rem;
+}
+
+.header .nav-principal {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.header .nav-principal a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.header .nav-principal a.activo,
+.header .nav-principal a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.header .carrito-status a {
+    background-color: #0a9396;
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.header .carrito-status a:hover {
+    background-color: #94d2bd;
+    color: #005f73;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    width: 100%;
+}
+
+.auth-links {
+    text-align: right;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.auth-links a {
+    color: #005f73;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Banner Principal / Hero */
+
+.hero-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background-color: var(--color-blanco);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-bottom: 2.5rem;
+}
+
+.hero-content h2 {
+    color: #005f73;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #0a9396;
+    color: var(--color-blanco);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-hero:hover {
+    background-color: #005f73;
+}
+
+.hero-image, .hero-image-placeholder {
+    width: 100%;
+    height: 280px;
+    object-fit: contain; 
+    border-radius: 8px;
+    background-color: #f4f7f6; 
+}
+
+
+/* Detalle del producto */
+
+.product-detail-banner .product-code {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.product-meta {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-meta .detail-price {
+    font-size: 1.25rem;
+    color: #0a9396;
+}
+
+/* Cuadrícula de Productos */
+
+.featured-products {
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+.section-subtitle {
+    color: #005f73;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.product-img, .product-img-placeholder {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #edf2f7;
+    margin-bottom: 0.75rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-title a {
+    color: #2b2d42;
+    text-decoration: none;
+}
+
+.product-title a:hover {
+    color: #0a9396;
+}
+
+.product-info {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.product-info .attribute {
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.product-info .price {
+    font-weight: bold;
+    color: #0a9396;
+    font-size: 1.05rem;
+}
+
+/* Pie de página Catálogo */
+
+.footer {
+    background-color: #2b2d42;
+    color: var(--color-blanco);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.footer a {
+    color: #94d2bd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-left .site-name-footer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pay-card {
+    background-color: #3a3d5c;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-right label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    flex: 1;
+}
+
+.newsletter-form button {
+    background-color: #0a9396;
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.newsletter-form button:hover {
+    background-color: #94d2bd;
+    color: #2b2d42;
+}
+
 /* Agregamos que el diseño sea responsivo y de esta manera se adapte a moviles*/
 
 @media (max-width: 1100px) {
@@ -707,8 +1089,9 @@ body{
     .admin .contenido {
         padding: 1.25rem;
     }
+}
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
     .publico .cabezera-principal {
         padding: var(--espaciado-sm) 1.25rem;
         flex-direction: column;
@@ -718,5 +1101,4 @@ body{
     .publico section {
         padding: var(--espaciado-md);
     }
-  }
 }
