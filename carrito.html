@@ -10,18 +10,18 @@
 <body class="publico">
 
   <header class="cabezera-principal">
-    <a href="pagina-principal.html" class="logo">
+    <a href="index.html" class="logo">
       <span class="icono-cuadrado">■</span>
       <strong>Veterinaria San Marcos</strong>
     </a>
     <nav class="nav-principal">
-      <a href="pagina-principal.html">Home</a> |
+      <a href="index.html">Home</a> |
       <a href="productos.html">Productos</a> |
       <a href="blogs.html">Blogs</a> |
       <a href="contacto.html">Contacto</a>
     </nav>
     <aside class="icono-carrito">
-      <a href="carrito.html">🛒 Carrito (1)</a>
+      <a href="carrito.html">🛒 Carrito (0)</a>
     </aside>
   </header>
 
@@ -34,24 +34,14 @@
     <section class="featured-products">
       <h2 class="section-subtitle">Tu Carrito de Compras</h2>
 
-      <div class="products-grid">
-        
-        <article class="product-card">
-          <img src="img/consulta-general.jpg" alt="Consulta médica general" class="product-img">
-          <h3 class="product-title">Consulta general</h3>
-          <div class="product-info">
-            <span class="attribute">Cantidad: 1</span>
-            <span class="price">$15.000</span>
-          </div>
-        </article>
-
-      </div>
+      <!-- El script js/tienda.js renderizará dinámicamente los productos aquí -->
+      <div class="products-grid carrito-lista"></div>
 
       <div class="hero-banner" style="margin-top: 2rem; grid-template-columns: 1fr;">
         <div class="hero-content">
-          <h3>Total a pagar: $15.000</h3>
+          <h3>Total a pagar: <span class="monto-total">$0</span></h3>
           <p>Procesa tu compra de forma rápida y segura.</p>
-          <a href="#" class="btn-hero">Pagar Ahora</a>
+          <button class="btn-hero" onclick="procesarPago()" style="border:none; cursor:pointer;">Pagar Ahora</button>
         </div>
       </div>
     </section>

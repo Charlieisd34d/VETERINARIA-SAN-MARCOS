@@ -10,18 +10,18 @@
 <body class="publico">
 
   <header class="cabezera-principal">
-    <a href="pagina-principal.html" class="logo">
+    <a href="index.html" class="logo">
       <span class="icono-cuadrado">■</span>
       <strong>Veterinaria San Marcos</strong>
     </a>
     <nav class="nav-principal">
-      <a href="pagina-principal.html">Home</a> |
+      <a href="index.html">Home</a> |
       <a href="productos.html">Productos</a> |
       <a href="blogs.html">Blogs</a> |
       <a href="contacto.html">Contacto</a>
     </nav>
     <aside class="icono-carrito">
-      <a href="carrito.html">🛒 Carrito (1)</a>
+      <a href="carrito.html">🛒 Carrito (0)</a>
     </aside>
   </header>
 
@@ -31,20 +31,20 @@
       <a href="inicio-sesion.html">Iniciar sesión</a> | <a href="registro-usuario.html">Registrar usuario</a>
     </div>
 
-    <section class="hero-banner product-detail-banner">
-      <img src="img/consulta-general.jpg" alt="Consulta médica general" class="hero-image">
+    <section class="hero-banner product-detail-banner" id="contenedor-detalle">
+      <img src="img/consulta-general.jpg" alt="Consulta médica general" class="hero-image" id="detalle-img">
       
       <div class="hero-content">
-        <span class="product-code">COD: SV001</span>
-        <h2>Consulta médica general</h2>
-        <p>Atención médica presencial integral para perros y gatos. Incluye revisión clínica de signos vitales, pesaje, diagnóstico primario y receta médica emitida por un veterinario colegiado.</p>
+        <span class="product-code" id="detalle-codigo">COD: SV001</span>
+        <h2 id="detalle-titulo">Consulta médica general</h2>
+        <p id="detalle-descripcion">Atención médica presencial integral para perros y gatos. Incluye revisión clínica de signos vitales, pesaje, diagnóstico primario y receta médica emitida por un veterinario colegiado.</p>
         
         <div class="product-meta">
-          <span class="attribute">Especie: Perros y Gatos</span>
-          <span class="detail-price">$15.000</span>
+          <span class="attribute" id="detalle-atributo">Especie: Perros y Gatos</span>
+          <span class="detail-price" id="detalle-precio">$15.000</span>
         </div>
 
-        <a href="carrito.html" class="btn-hero">🛒 Añadir al carrito</a>
+        <button class="btn-hero" id="btn-add-detalle" style="border:none; cursor:pointer;">🛒 Añadir al carrito</button>
       </div>
     </section>
 
