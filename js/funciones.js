@@ -223,13 +223,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  
+  /* 4. Formulario de creación de usuario */
 
-/* 4. Formulario de creación de usuario */
+  const formUsuario = document.querySelector('#formulario-usuario');
 
-const formUsuario = document.querySelector('#formulario-usuario');
-
-if (formUsuario) {
+  if (formUsuario) {
 
     const run = document.querySelector('#run');
     const nombre = document.querySelector('#nombre');
@@ -242,202 +240,341 @@ if (formUsuario) {
     const confirmacion = document.querySelector('#confirmacion');
 
     const comunasPorRegion = {
-        "Metropolitana": [
-            "Santiago",
-            "Providencia",
-            "San Bernardo",
-            "Maipú"
-        ],
-        "Valparaíso": [
-            "Valparaíso",
-            "Viña del Mar",
-            "Quilpué"
-        ]
+      "Metropolitana": [
+        "Santiago",
+        "Providencia",
+        "San Bernardo",
+        "Maipú"
+      ],
+      "Valparaíso": [
+        "Valparaíso",
+        "Viña del Mar",
+        "Quilpué"
+      ]
     };
-
-
-    /* Reiniciar selección de comuna */
 
     function reiniciarComuna() {
 
-        comuna.replaceChildren();
+      comuna.replaceChildren();
 
-        const opcionInicial = document.createElement('option');
+      const opcionInicial = document.createElement('option');
 
-        opcionInicial.value = '';
-        opcionInicial.textContent = 'Seleccione una comuna';
-
-        comuna.appendChild(opcionInicial);
-
-        comuna.disabled = true;
+      opcionInicial.value = '';
+      opcionInicial.textContent = 'Seleccione una comuna';
+      comuna.appendChild(opcionInicial);
+      comuna.disabled = true;
     }
-
-
-    /* Cargar regiones */
 
     Object.keys(comunasPorRegion).forEach(function (regionNombre) {
 
-        const opcion = document.createElement('option');
+      const opcion = document.createElement('option');
 
-        opcion.value = regionNombre;
-        opcion.textContent = regionNombre;
-
-        region.appendChild(opcion);
+      opcion.value = regionNombre;
+      opcion.textContent = regionNombre;
+      region.appendChild(opcion);
     });
-
-
-    /* Actualizar comunas */
 
     region.addEventListener('change', function () {
 
-        reiniciarComuna();
+      reiniciarComuna();
 
-        if (comunasPorRegion[region.value]) {
+      if (comunasPorRegion[region.value]) {
+        comunasPorRegion[region.value].forEach(function (comunaNombre) {
 
-            comunasPorRegion[region.value].forEach(function (comunaNombre) {
+          const opcion = document.createElement('option');
 
-                const opcion = document.createElement('option');
+          opcion.value = comunaNombre;
+          opcion.textContent = comunaNombre;
+          comuna.appendChild(opcion);
+        });
 
-                opcion.value = comunaNombre;
-                opcion.textContent = comunaNombre;
-
-                comuna.appendChild(opcion);
-            });
-
-            comuna.disabled = false;
-        }
+        comuna.disabled = false;
+      }
     });
 
 
-    /* Validar RUN */
-
     function validarRun(valor) {
 
-        valor = valor.trim().toUpperCase();
+      valor = valor.trim().toUpperCase();
 
-        if (!/^[0-9]{6,8}[0-9K]$/.test(valor)) {
-            return false;
+      if (!/^[0-9]{6,8}[0-9K]$/.test(valor)) {
+        return false;
+      }
+
+      const cuerpo = valor.slice(0, -1);
+      const digitoVerificador = valor.slice(-1);
+
+      let suma = 0;
+      let multiplicador = 2;
+
+      for (let i = cuerpo.length - 1; i >= 0; i--) {
+        suma += Number(cuerpo[i]) * multiplicador;
+        multiplicador++;
+
+        if (multiplicador > 7) {
+          multiplicador = 2;
         }
+      }
 
-        const cuerpo = valor.slice(0, -1);
-        const digitoVerificador = valor.slice(-1);
+      const resto = 11 - (suma % 11);
 
-        let suma = 0;
-        let multiplicador = 2;
+      let digitoCalculado;
 
-        for (let i = cuerpo.length - 1; i >= 0; i--) {
-
-            suma += Number(cuerpo[i]) * multiplicador;
-
-            multiplicador++;
-
-            if (multiplicador > 7) {
-                multiplicador = 2;
-            }
-        }
-
-        const resto = 11 - (suma % 11);
-
-        let digitoCalculado;
-
-        if (resto === 11) {
-            digitoCalculado = '0';
-        } else if (resto === 10) {
-            digitoCalculado = 'K';
-        } else {
-            digitoCalculado = String(resto);
-        }
-
-        return digitoCalculado === digitoVerificador;
+      if (resto === 11) {
+        digitoCalculado = '0';
+      } else if (resto === 10) {
+        digitoCalculado = 'K';
+      } else {
+        digitoCalculado = String(resto);
+      }
+      return digitoCalculado === digitoVerificador;
     }
-
-
-    /* Validar correo permitido */
 
     function validarCorreoUsuario(valor) {
 
-        return /^[^\s@]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/
-            .test(valor.trim());
+      return /^[^\s@]+@(duoc\.cl|profesor\.duoc\.cl|gmail\.com)$/
+        .test(valor.trim());
     }
-
-
-    /* Validar formulario */
 
     formUsuario.addEventListener('submit', function (e) {
 
-        e.preventDefault();
+      e.preventDefault();
 
-        let formularioValido = true;
-        let mensajeError = CONFIG_PUBLICO.mensajes.camposObligatorios;
+      let formularioValido = true;
+      let mensajeError = CONFIG_PUBLICO.mensajes.camposObligatorios;
 
+      if (!validarRun(run.value)) {
+        run.classList.add('campo-error');
 
-        /* Validar RUN */
+        formularioValido = false;
+        mensajeError = 'Ingresa un RUN válido.';
 
-        if (!validarRun(run.value)) {
+      } else {
 
-            run.classList.add('campo-error');
+        run.classList.remove('campo-error');
+      }
 
+      [nombre, apellidos, tipoUsuario, region, comuna, direccion]
+        .forEach(function (campo) {
+
+          if (!validarCampo(campo)) {
             formularioValido = false;
-            mensajeError = 'Ingresa un RUN válido.';
+          }
+        });
 
-        } else {
+      if (!validarCorreoUsuario(correo.value)) {
 
-            run.classList.remove('campo-error');
+        correo.classList.add('campo-error');
+
+        formularioValido = false;
+        mensajeError =
+          'El correo debe terminar en @duoc.cl, @profesor.duoc.cl o @gmail.com.';
+
+      } else {
+
+        correo.classList.remove('campo-error');
+      }
+
+      if (formularioValido) {
+
+        confirmacion.textContent =
+          'Usuario registrado correctamente.';
+
+        confirmacion.classList.remove('error');
+        confirmacion.classList.add('exito');
+
+        formUsuario.reset();
+
+        reiniciarComuna();
+
+      } else {
+
+        confirmacion.textContent = mensajeError;
+
+        confirmacion.classList.remove('exito');
+        confirmacion.classList.add('error');
+      }
+  });
+}
+    
+      /* 5. Formulario de creación de producto */
+
+      const formProducto = document.querySelector('#formulario-producto');
+
+      if (formProducto) {
+
+        const codigoProducto = document.querySelector('#codigo-producto');
+        const nombre = document.querySelector('#nombre');
+        const descripcion = document.querySelector('#descripcion');
+        const precio = document.querySelector('#precio');
+        const stock = document.querySelector('#stock');
+        const alertaStock = document.querySelector('#alerta-stock');
+        const imagen = document.querySelector('#imagen');
+        const categoria = document.querySelector('#categoria');
+        const confirmacion = document.querySelector('#confirmacion');
+
+        function validarCampo(campo) {
+
+          if (campo.value.trim() === '') {
+            campo.classList.add('campo-error');
+            return false;
+          }
+
+          campo.classList.remove('campo-error');
+          return true;
         }
 
+        function validarCodigo() {
 
-        /* Validar campos obligatorios */
+          const valor = codigoProducto.value.trim();
 
-        [nombre, apellidos, tipoUsuario, region, comuna, direccion]
-            .forEach(function (campo) {
+          if (valor.length < 3 || valor.length > 15) {
+            codigoProducto.classList.add('campo-error');
+            return false;
+          }
 
-                if (!validarCampo(campo)) {
-                    formularioValido = false;
-                }
-            });
-
-
-        /* Validar correo */
-
-        if (!validarCorreoUsuario(correo.value)) {
-
-            correo.classList.add('campo-error');
-
-            formularioValido = false;
-            mensajeError =
-                'El correo debe terminar en @duoc.cl, @profesor.duoc.cl o @gmail.com.';
-
-        } else {
-
-            correo.classList.remove('campo-error');
+          codigoProducto.classList.remove('campo-error');
+          return true;
         }
 
+        function validarNombre() {
 
-        /* Resultado */
+          const valor = nombre.value.trim();
 
-        if (formularioValido) {
+          if (valor === '' || valor.length > 100) {
+            nombre.classList.add('campo-error');
+            return false;
+          }
+
+          nombre.classList.remove('campo-error');
+          return true;
+        }
+
+        function validarDescripcion() {
+
+          const valor = descripcion.value.trim();
+
+          if (valor.length > 500) {
+            descripcion.classList.add('campo-error');
+            return false;
+          }
+
+          descripcion.classList.remove('campo-error');
+          return true;
+        }
+
+        function validarPrecio() {
+
+          const valor = precio.value.trim();
+          const numero = Number(valor);
+
+          if (valor === '' || Number.isNaN(numero) || numero < 0) {
+            precio.classList.add('campo-error');
+            return false;
+          }
+
+          precio.classList.remove('campo-error');
+          return true;
+        }
+
+        function validarStock() {
+
+          const valor = stock.value.trim();
+          const numero = Number(valor);
+
+          if (
+            valor === '' ||
+            Number.isNaN(numero) ||
+            numero < 0 ||
+            !Number.isInteger(numero)
+          ) {
+            stock.classList.add('campo-error');
+            return false;
+          }
+
+          stock.classList.remove('campo-error');
+          return true;
+        }
+
+        function validarCategoria() {
+
+          if (categoria.value === '') {
+            categoria.classList.add('campo-error');
+            return false;
+          }
+
+          categoria.classList.remove('campo-error');
+          return true;
+        }
+
+        function actualizarAlertaStock() {
+
+          if (stock.value !== '' && Number(stock.value) <= 0) {
+            alertaStock.classList.add('visible');
+          } else {
+            alertaStock.classList.remove('visible');
+          }
+        }
+
+        stock.addEventListener('input', actualizarAlertaStock);
+
+        formProducto.addEventListener('submit', function (e) {
+
+          e.preventDefault();
+
+          let formularioValido = true;
+
+          if (!validarCodigo()) {
+            formularioValido = false;
+          }
+
+          if (!validarNombre()) {
+            formularioValido = false;
+          }
+
+          if (!validarDescripcion()) {
+            formularioValido = false;
+          }
+
+          if (!validarPrecio()) {
+            formularioValido = false;
+          }
+
+          if (!validarStock()) {
+            formularioValido = false;
+          }
+
+          if (!validarCategoria()) {
+            formularioValido = false;
+          }
+
+          actualizarAlertaStock();
+
+          if (formularioValido) {
 
             confirmacion.textContent =
-            'Usuario registrado correctamente.';
+              'Producto registrado correctamente.';
 
             confirmacion.classList.remove('error');
             confirmacion.classList.add('exito');
 
-            formUsuario.reset();
+            formProducto.reset();
 
-            reiniciarComuna();
+            alertaStock.classList.remove('visible');
 
-        } else {
+          } else {
 
-            confirmacion.textContent = mensajeError;
+            confirmacion.textContent =
+              'Por favor, corrige los campos indicados.';
 
             confirmacion.classList.remove('exito');
             confirmacion.classList.add('error');
-        }
+          }
+        });
+        
+      }
     });
-  }
-});
-    
+
 
 /* Veterinaria San Marcos - Lógica Mínima */
 const productos = [

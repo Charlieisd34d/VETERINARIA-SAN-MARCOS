@@ -348,6 +348,10 @@ body {
     font-size: 0.9rem;
 }
 
+.admin .alerta.visible {
+    display: block;
+}
+
 .admin .icono-estadistica {
     grid-row: 1 / 3;
 
